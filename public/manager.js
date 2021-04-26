@@ -9,7 +9,15 @@ export class Manager extends Employee {
         this.listOfSalary = listSalary
     }
 
+    addEmployee(newEmp){
+        this.listOfEmployees.push(newEmp)
+    }
+
+    removeEmployee(delEmp){
+          this.listOfEmployees = this.listOfEmployees.filter(item => item !== delEmp)
+    }
+
     information() {
-        console.log(`Менеджер: Имя ${this.name}, фамилия ${this.surname}, зарплата ${this.salary}, список выплат ${this.listOfSalary}, список подчиненных ${this.listOfEmployees}`)
+        console.log(`Менеджер: Имя ${this.name}, фамилия ${this.surname}, зарплата ${this.salaryGet}, список выплат ${this.listOfSalary}, список подчиненных ${this.listOfEmployees}`)
     }
 }
